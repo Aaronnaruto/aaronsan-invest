@@ -1,0 +1,1183 @@
+{
+ "updatedAt": "2026-10-08",
+ "quotes": [
+  {
+   "sym": "SPY",
+   "closes": [
+    [
+     "2026-09-01",
+     761.78
+    ],
+    [
+     "2026-09-02",
+     765.16
+    ],
+    [
+     "2026-09-03",
+     773.17
+    ],
+    [
+     "2026-09-04",
+     770.19
+    ],
+    [
+     "2026-09-08",
+     765.96
+    ],
+    [
+     "2026-09-09",
+     762.4
+    ],
+    [
+     "2026-09-10",
+     757.83
+    ],
+    [
+     "2026-09-11",
+     764.29
+    ],
+    [
+     "2026-09-14",
+     760.88
+    ],
+    [
+     "2026-09-15",
+     757.39
+    ],
+    [
+     "2026-09-16",
+     754.05
+    ],
+    [
+     "2026-09-17",
+     762.6
+    ],
+    [
+     "2026-09-18",
+     761.69
+    ],
+    [
+     "2026-09-21",
+     773.5
+    ],
+    [
+     "2026-09-22",
+     773.38
+    ],
+    [
+     "2026-09-23",
+     767.81
+    ],
+    [
+     "2026-09-24",
+     767.18
+    ],
+    [
+     "2026-09-25",
+     771.35
+    ],
+    [
+     "2026-09-28",
+     765.61
+    ],
+    [
+     "2026-09-29",
+     764.2
+    ],
+    [
+     "2026-09-30",
+     762.63
+    ],
+    [
+     "2026-10-01",
+     763.99
+    ],
+    [
+     "2026-10-02",
+     769.64
+    ],
+    [
+     "2026-10-05",
+     774.83
+    ],
+    [
+     "2026-10-06",
+     779.09
+    ],
+    [
+     "2026-10-07",
+     777.22
+    ]
+   ],
+   "asOf": "2026-10-07",
+   "source": "stockanalysis.com 收盘价",
+   "kind": "index",
+   "label": "标普 500",
+   "order": 1
+  },
+  {
+   "sym": "QQQ",
+   "closes": [
+    [
+     "2026-09-01",
+     707.64
+    ],
+    [
+     "2026-09-02",
+     709.24
+    ],
+    [
+     "2026-09-03",
+     717.67
+    ],
+    [
+     "2026-09-04",
+     718.96
+    ],
+    [
+     "2026-09-08",
+     718.36
+    ],
+    [
+     "2026-09-09",
+     716.31
+    ],
+    [
+     "2026-09-10",
+     708.69
+    ],
+    [
+     "2026-09-11",
+     714.88
+    ],
+    [
+     "2026-09-14",
+     709.18
+    ],
+    [
+     "2026-09-15",
+     704.54
+    ],
+    [
+     "2026-09-16",
+     704.72
+    ],
+    [
+     "2026-09-17",
+     716.92
+    ],
+    [
+     "2026-09-18",
+     721.45
+    ],
+    [
+     "2026-09-21",
+     741.47
+    ],
+    [
+     "2026-09-22",
+     747.46
+    ],
+    [
+     "2026-09-23",
+     741.21
+    ],
+    [
+     "2026-09-24",
+     741.1
+    ],
+    [
+     "2026-09-25",
+     744.5
+    ],
+    [
+     "2026-09-28",
+     736.53
+    ],
+    [
+     "2026-09-29",
+     737.93
+    ],
+    [
+     "2026-09-30",
+     739.77
+    ],
+    [
+     "2026-10-01",
+     742.03
+    ],
+    [
+     "2026-10-02",
+     749.58
+    ],
+    [
+     "2026-10-05",
+     756.2
+    ],
+    [
+     "2026-10-06",
+     759.66
+    ],
+    [
+     "2026-10-07",
+     757.73
+    ]
+   ],
+   "asOf": "2026-10-07",
+   "source": "stockanalysis.com 收盘价",
+   "kind": "index",
+   "label": "纳指 100",
+   "order": 2
+  },
+  {
+   "sym": "DIA",
+   "closes": [
+    [
+     "2026-09-01",
+     527.75
+    ],
+    [
+     "2026-09-02",
+     530.62
+    ],
+    [
+     "2026-09-03",
+     536.93
+    ],
+    [
+     "2026-09-04",
+     534.08
+    ],
+    [
+     "2026-09-08",
+     528.03
+    ],
+    [
+     "2026-09-09",
+     524.07
+    ],
+    [
+     "2026-09-10",
+     520.75
+    ],
+    [
+     "2026-09-11",
+     525.79
+    ],
+    [
+     "2026-09-14",
+     524.49
+    ],
+    [
+     "2026-09-15",
+     521.23
+    ],
+    [
+     "2026-09-16",
+     515.22
+    ],
+    [
+     "2026-09-17",
+     518.35
+    ],
+    [
+     "2026-09-18",
+     515.88
+    ],
+    [
+     "2026-09-21",
+     519.78
+    ],
+    [
+     "2026-09-22",
+     518.0
+    ],
+    [
+     "2026-09-23",
+     514.3
+    ],
+    [
+     "2026-09-24",
+     512.68
+    ],
+    [
+     "2026-09-25",
+     517.49
+    ],
+    [
+     "2026-09-28",
+     514.02
+    ],
+    [
+     "2026-09-29",
+     512.88
+    ],
+    [
+     "2026-09-30",
+     508.55
+    ],
+    [
+     "2026-10-01",
+     508.62
+    ],
+    [
+     "2026-10-02",
+     511.1
+    ],
+    [
+     "2026-10-05",
+     512.11
+    ],
+    [
+     "2026-10-06",
+     514.56
+    ],
+    [
+     "2026-10-07",
+     511.02
+    ]
+   ],
+   "asOf": "2026-10-07",
+   "source": "stockanalysis.com 收盘价",
+   "kind": "index",
+   "label": "道琼斯",
+   "order": 3
+  },
+  {
+   "sym": "IWM",
+   "closes": [
+    [
+     "2026-09-01",
+     290.57
+    ],
+    [
+     "2026-09-02",
+     294.01
+    ],
+    [
+     "2026-09-03",
+     295.19
+    ],
+    [
+     "2026-09-04",
+     296.01
+    ],
+    [
+     "2026-09-08",
+     294.67
+    ],
+    [
+     "2026-09-09",
+     290.64
+    ],
+    [
+     "2026-09-10",
+     287.7
+    ],
+    [
+     "2026-09-11",
+     288.89
+    ],
+    [
+     "2026-09-14",
+     287.91
+    ],
+    [
+     "2026-09-15",
+     285.14
+    ],
+    [
+     "2026-09-16",
+     283.92
+    ],
+    [
+     "2026-09-17",
+     285.43
+    ],
+    [
+     "2026-09-18",
+     284.1
+    ],
+    [
+     "2026-09-21",
+     285.58
+    ],
+    [
+     "2026-09-22",
+     287.21
+    ],
+    [
+     "2026-09-23",
+     281.92
+    ],
+    [
+     "2026-09-24",
+     281.66
+    ],
+    [
+     "2026-09-25",
+     281.97
+    ],
+    [
+     "2026-09-28",
+     280.02
+    ],
+    [
+     "2026-09-29",
+     279.01
+    ],
+    [
+     "2026-09-30",
+     277.89
+    ],
+    [
+     "2026-10-01",
+     279.02
+    ],
+    [
+     "2026-10-02",
+     281.52
+    ],
+    [
+     "2026-10-05",
+     283.38
+    ],
+    [
+     "2026-10-06",
+     281.34
+    ],
+    [
+     "2026-10-07",
+     277.7
+    ]
+   ],
+   "asOf": "2026-10-07",
+   "source": "stockanalysis.com 收盘价",
+   "kind": "index",
+   "label": "罗素 2000",
+   "order": 4
+  },
+  {
+   "sym": "COHR",
+   "closes": [
+    [
+     "2026-09-01",
+     272.03
+    ],
+    [
+     "2026-09-02",
+     268.64
+    ],
+    [
+     "2026-09-03",
+     264.41
+    ],
+    [
+     "2026-09-04",
+     281.86
+    ],
+    [
+     "2026-09-08",
+     301.88
+    ],
+    [
+     "2026-09-09",
+     303.48
+    ],
+    [
+     "2026-09-10",
+     293.17
+    ],
+    [
+     "2026-09-11",
+     305.37
+    ],
+    [
+     "2026-09-14",
+     266.5
+    ],
+    [
+     "2026-09-15",
+     271.17
+    ],
+    [
+     "2026-09-16",
+     289.93
+    ],
+    [
+     "2026-09-17",
+     295.98
+    ],
+    [
+     "2026-09-18",
+     317.36
+    ],
+    [
+     "2026-09-21",
+     321.52
+    ],
+    [
+     "2026-09-22",
+     310.39
+    ],
+    [
+     "2026-09-23",
+     300.6
+    ],
+    [
+     "2026-09-24",
+     290.61
+    ],
+    [
+     "2026-09-25",
+     295.83
+    ],
+    [
+     "2026-09-28",
+     282.45
+    ],
+    [
+     "2026-09-29",
+     292.21
+    ],
+    [
+     "2026-09-30",
+     287.81
+    ],
+    [
+     "2026-10-01",
+     319.19
+    ],
+    [
+     "2026-10-02",
+     337.04
+    ],
+    [
+     "2026-10-05",
+     333.64
+    ],
+    [
+     "2026-10-06",
+     338.36
+    ],
+    [
+     "2026-10-07",
+     334.56
+    ]
+   ],
+   "asOf": "2026-10-07",
+   "source": "stockanalysis.com 收盘价",
+   "kind": "stock",
+   "label": "Coherent",
+   "lo52": 108.19,
+   "hi52": 440.0,
+   "target": 415.36,
+   "nextEarnings": "2026-11-04"
+  },
+  {
+   "sym": "RKLB",
+   "closes": [
+    [
+     "2026-09-01",
+     62.54
+    ],
+    [
+     "2026-09-02",
+     63.1
+    ],
+    [
+     "2026-09-03",
+     63.81
+    ],
+    [
+     "2026-09-04",
+     64.26
+    ],
+    [
+     "2026-09-08",
+     65.87
+    ],
+    [
+     "2026-09-09",
+     63.07
+    ],
+    [
+     "2026-09-10",
+     61.96
+    ],
+    [
+     "2026-09-11",
+     62.95
+    ],
+    [
+     "2026-09-14",
+     62.55
+    ],
+    [
+     "2026-09-15",
+     63.55
+    ],
+    [
+     "2026-09-16",
+     63.7
+    ],
+    [
+     "2026-09-17",
+     67.82
+    ],
+    [
+     "2026-09-18",
+     64.57
+    ],
+    [
+     "2026-09-21",
+     69.89
+    ],
+    [
+     "2026-09-22",
+     71.98
+    ],
+    [
+     "2026-09-23",
+     70.31
+    ],
+    [
+     "2026-09-24",
+     73.61
+    ],
+    [
+     "2026-09-25",
+     73.95
+    ],
+    [
+     "2026-09-28",
+     72.19
+    ],
+    [
+     "2026-09-29",
+     69.7
+    ],
+    [
+     "2026-09-30",
+     69.68
+    ],
+    [
+     "2026-10-01",
+     70.46
+    ],
+    [
+     "2026-10-02",
+     73.92
+    ],
+    [
+     "2026-10-05",
+     73.02
+    ],
+    [
+     "2026-10-06",
+     75.06
+    ],
+    [
+     "2026-10-07",
+     71.92
+    ]
+   ],
+   "asOf": "2026-10-07",
+   "source": "stockanalysis.com 收盘价",
+   "kind": "stock",
+   "label": "Rocket Lab",
+   "lo52": 37.57,
+   "hi52": 151.0,
+   "target": 110.07,
+   "nextEarnings": "2026-11-09",
+   "earningsNote": "预估"
+  },
+  {
+   "sym": "ORCL",
+   "closes": [
+    [
+     "2026-09-01",
+     141.32
+    ],
+    [
+     "2026-09-02",
+     145.75
+    ],
+    [
+     "2026-09-03",
+     154.04
+    ],
+    [
+     "2026-09-04",
+     158.78
+    ],
+    [
+     "2026-09-08",
+     162.52
+    ],
+    [
+     "2026-09-09",
+     161.63
+    ],
+    [
+     "2026-09-10",
+     152.94
+    ],
+    [
+     "2026-09-11",
+     150.28
+    ],
+    [
+     "2026-09-14",
+     144.79
+    ],
+    [
+     "2026-09-15",
+     140.35
+    ],
+    [
+     "2026-09-16",
+     143.16
+    ],
+    [
+     "2026-09-17",
+     150.59
+    ],
+    [
+     "2026-09-18",
+     147.61
+    ],
+    [
+     "2026-09-21",
+     148.56
+    ],
+    [
+     "2026-09-22",
+     149.2
+    ],
+    [
+     "2026-09-23",
+     144.56
+    ],
+    [
+     "2026-09-24",
+     139.54
+    ],
+    [
+     "2026-09-25",
+     137.1
+    ],
+    [
+     "2026-09-28",
+     132.6
+    ],
+    [
+     "2026-09-29",
+     137.79
+    ],
+    [
+     "2026-09-30",
+     137.3
+    ],
+    [
+     "2026-10-01",
+     138.07
+    ],
+    [
+     "2026-10-02",
+     142.3
+    ],
+    [
+     "2026-10-05",
+     142.48
+    ],
+    [
+     "2026-10-06",
+     144.77
+    ],
+    [
+     "2026-10-07",
+     143.56
+    ]
+   ],
+   "asOf": "2026-10-07",
+   "source": "stockanalysis.com 收盘价",
+   "kind": "stock",
+   "label": "Oracle",
+   "lo52": 114.5,
+   "hi52": 322.54,
+   "target": 237.97
+  }
+ ],
+ "news": [
+  {
+   "ticker": "ORCL",
+   "company": "Oracle",
+   "updatedAt": "2026-10-08",
+   "watch": "数据中心通电进度（Jupiter 管线 2027-02、Lighthouse 输电线重审）和 Oracle Health 外泄的诉讼成本。你的 $115 看跌期权 10/16 到期，正股 10/7 收 $143.56，价外约 20%。",
+   "items": [
+    {
+     "date": "2026-10-05",
+     "kind": "risk",
+     "sentiment": "neg",
+     "source": "Becker's Hospital Review",
+     "url": "https://www.beckershospitalreview.com/healthcare-information-technology/ehrs/oracle-health-breach-exposed-data-of-nearly-20-million-people-report/",
+     "headline": "Oracle Health 2025 年数据外泄规模曝光：近 2,000 万人受影响",
+     "summary": "据 Bloomberg 引述德州总检察长报告，黑客在 2025 年 1 月后入侵了尚未迁上云的旧 Cerner 服务器，外泄地址、社保号码和医疗资料，其中德州约 300 万人。至少 29 家医院和医疗系统受影响，Oracle Health 正面对诉讼，后续可能增加安全与合规开支。Oracle 未回应。",
+     "key": true
+    },
+    {
+     "date": "2026-10-06",
+     "kind": "capital",
+     "sentiment": "pos",
+     "source": "Finbold",
+     "url": "https://finbold.com/monster-insider-trading-alert-for-oracle-stock",
+     "headline": "董事 Stephen Rusckowski 买入 2.5 万股，约 $348 万",
+     "summary": "成交日 9/29，均价约 $139.35，正好是 9 月股价最低的那几天。内部人在低位自掏腰包买入，通常被市场视为对前景有信心的信号。"
+    },
+    {
+     "date": "2026-10-07",
+     "kind": "market",
+     "sentiment": "watch",
+     "source": "ad-hoc-news",
+     "url": "https://ad-hoc-news.de/boerse/news/corporate-news/oracle-stock-falls-1-02-percent-as-ai-backlog-stays-central/70256860",
+     "headline": "10/7 小跌约 1%，收 $143.56；Q1 自由现金流为 −$50 亿",
+     "summary": "资本开支 $285 亿，经营现金流 $231 亿，自由现金流转负，这是空头最常引用的数字。41 位分析师中 35 位给买入，平均目标价 $237.97。股息登记日 10/9，派息日 10/23。"
+    },
+    {
+     "date": "2026-10-01",
+     "kind": "business",
+     "sentiment": "pos",
+     "source": "Benzinga",
+     "url": "https://www.benzinga.com/trading-ideas/movers/26/10/62112753/oracle-stock-is-falling-whats-going-on",
+     "headline": "传腾讯租用 Oracle 东南亚数据中心，5 年约 $70 亿",
+     "summary": "据英国《金融时报》报道，腾讯可借此用到约 10 万颗在中国买不到的先进 AI 芯片，双方都未证实。股价盘中先涨约 2%，随大盘转弱后回落。技术面：$135 附近是支撑，$153.5 是阻力。"
+    },
+    {
+     "date": "2026-09-30",
+     "kind": "project",
+     "sentiment": "neg",
+     "source": "Investing.com",
+     "url": "https://www.investing.com/news/stock-market-news/oracle-shares-slip-on-unconfirmed-report-of-delays-at-wisconsin-ai-megacampus-4925179",
+     "headline": "威斯康星 AI 园区 Project Lighthouse 被指严重延误",
+     "summary": "园区位于 Port Washington、占地 500 英亩，与 Vantage Data Centers 合建。研究机构 Aterio 称，必须等 ATC 建好新的高压输电线才能运营，但州公共服务委员会已撤回初步批准、重新审查。消息出来当天股价跌 1.8%，Oracle 没有回应。",
+     "key": true
+    },
+    {
+     "date": "2026-09-29",
+     "kind": "business",
+     "sentiment": "pos",
+     "source": "Yahoo Finance",
+     "url": "https://finance.yahoo.com/markets/stocks/articles/oracle-stock-fell-8-week-172615420.html",
+     "headline": "OpenAI 年化收入逼近 $700 亿，股价反弹约 4%",
+     "summary": "OpenAI 是 Oracle 最大的云客户之一，它的收入增长缓解了市场对“OpenAI 付不起合同”的担心。管理层也表示，新墨西哥和威斯康星两个项目不影响 FY27 指引。"
+    },
+    {
+     "date": "2026-09-28",
+     "kind": "market",
+     "sentiment": "neg",
+     "source": "Yahoo Finance",
+     "url": "https://finance.yahoo.com/markets/stocks/articles/oracle-stock-fell-8-week-172615420.html",
+     "headline": "数据中心延误拖累，单周大跌约 8%",
+     "summary": "9/28 收在 $132.60，是 9 月最低点，距离 7 月低点 $114.50 已不远。从 9/8 的 $162.52 算起，三周跌了约 18%。"
+    },
+    {
+     "date": "2026-09-25",
+     "kind": "industry",
+     "sentiment": "watch",
+     "source": "24/7 Wall St.",
+     "url": "https://247wallst.com/investing/2026/09/25/oracles-collapse-200-billion-in-data-center-shut-downs/",
+     "headline": "整个行业的数据中心项目都在卡关",
+     "summary": "多方报道估计，2026 年约有 500 个数据中心因地方反对和审批问题受阻或延迟，涉及 $640 亿到 $2,000 亿。Apollo 警告云计算巨头的公司债风险在上升。Oracle 过去一年股价跌了约 55%，而同期微软基本持平。"
+    },
+    {
+     "date": "2026-09-24",
+     "kind": "project",
+     "sentiment": "neg",
+     "source": "TradingKey",
+     "url": "https://www.tradingkey.com/analysis/stocks/us-stocks/262185282-oracle-orcl-stock-drop-project-jupiter-force-majeure-delay-tradingkey",
+     "headline": "暴跌主因：新墨西哥 Project Jupiter 发出不可抗力通知",
+     "summary": "Jupiter 是 2.45GW 的超大园区，用 Bloom Energy 天然气燃料电池供电。开发商是 Stack Infrastructure，Blue Owl 出资，约 20 家银行提供 $180 亿项目贷款。因为天然气管线的路线屡次被州土地办公室否决，投运推迟到 2027-02-01，原定 2028 年投产的目标受到威胁。Oracle 向开发商发出通知，要求若无法按时投运就延后付款，但这并不代表退租。消息一出，盘前跌 5%，开盘后跌超 7%。",
+     "key": true
+    },
+    {
+     "date": "2026-09-10",
+     "kind": "earnings",
+     "sentiment": "pos",
+     "source": "Oracle 官方",
+     "url": "https://www.oracle.com/news/announcement/q1fy27-earnings-release-2026-09-10/",
+     "headline": "Q1 FY27 营收 $193 亿（+30%），RPO 达 $6,640 亿，但当天收盘跌约 5%",
+     "summary": "云收入 $116 亿（+62%），其中 IaaS $74 亿（+121%）、SaaS $42 亿（+10%）；non-GAAP EPS $1.92。季度内新签 AI 云合同超 $300 亿。业绩超预期，股价却从 $161.63 跌到 $152.94，市场更在意资本开支和交付进度。"
+    },
+    {
+     "date": "2026-09-10",
+     "kind": "guidance",
+     "sentiment": "pos",
+     "source": "Oracle 官方",
+     "url": "https://www.oracle.com/news/announcement/q1fy27-earnings-release-2026-09-10/",
+     "headline": "全年营收指引至少 $900 亿，EPS $8.10",
+     "summary": "Q2 指引：营收增长 30–34%，云收入增长 64–70%，non-GAAP EPS $1.83–1.91。"
+    },
+    {
+     "date": "2026-09-08",
+     "kind": "risk",
+     "sentiment": "watch",
+     "source": "Benzinga",
+     "url": "https://www.benzinga.com/markets/tech/26/09/61668272/why-oracle-stock-is-the-trade-to-watch-after-openais-agi-claim",
+     "headline": "穆迪提示 OpenAI 交易对手风险",
+     "summary": "Oracle 与 OpenAI 签了 $3,000 亿、为期五年的算力合同，而 OpenAI 当时的年化收入远低于这个承诺规模。资本开支扩张和现金消耗是空头的主要论点。"
+    }
+   ]
+  },
+  {
+   "ticker": "COHR",
+   "company": "Coherent",
+   "updatedAt": "2026-10-08",
+   "watch": "11/4 公布 FQ1 FY27 财报。股价波动很大，过去一年有 85 次单日涨跌超过 5%；市盈率约 81 倍，分析师平均目标价 $415。",
+   "items": [
+    {
+     "date": "2026-10-06",
+     "kind": "guidance",
+     "sentiment": "pos",
+     "source": "ad-hoc-news",
+     "url": "https://www.ad-hoc-news.de/boerse/news/corporate-news/coherent-stock-reflects-34-percent-revenue-growth/70243880",
+     "headline": "FQ1 FY27 营收指引 $22–24 亿，中值环比增约 12%",
+     "summary": "Q4 营收同比增长 34%。经调整毛利率 40.2%，仍低于管理层 42% 以上的长期目标；磷化铟（InP）产能是主要执行风险。11/4 公布财报时重点看毛利率。"
+    },
+    {
+     "date": "2026-10-07",
+     "kind": "market",
+     "sentiment": "watch",
+     "source": "stockanalysis.com",
+     "url": "https://stockanalysis.com/stocks/cohr/history/",
+     "headline": "两天大涨后横盘：10/6 收 $338.36，10/7 收 $334.56",
+     "summary": "在 $330–340 区间整理，距 52 周高点 $440 约 24%。"
+    },
+    {
+     "date": "2026-10-02",
+     "kind": "market",
+     "sentiment": "pos",
+     "source": "stockanalysis.com",
+     "url": "https://stockanalysis.com/stocks/cohr/history/",
+     "headline": "两天大涨约 17%，收在 $337.04",
+     "summary": "10/1 涨约 11%，10/2 再涨约 6%，从 9/30 的 $287.81 一路升到近期高位；10/5 小幅回落 1% 至 $333.64。距 52 周高点 $440 还有约 24%。"
+    },
+    {
+     "date": "2026-10-01",
+     "kind": "business",
+     "sentiment": "pos",
+     "source": "24/7 Wall St.",
+     "url": "https://247wallst.com/investing/2026/10/01/coherent-jumps-10-on-photonlink-push-and-bernsteins-outperform-start-lumentum-rises-9-corning-advances-3/",
+     "headline": "发布 PhotonLink 集成光学平台，已有 10 多家客户在接洽",
+     "summary": "平台覆盖芯片到芯片、机架级的光互连，提供共封装（CPO）和近封装（NPO）方案，目标是把数据中心里的电连接换成光连接，公司估计到 2030 年能带来约 $300 亿的市场扩张。",
+     "key": true
+    },
+    {
+     "date": "2026-10-01",
+     "kind": "analyst",
+     "sentiment": "pos",
+     "source": "24/7 Wall St.",
+     "url": "https://247wallst.com/investing/2026/10/01/coherent-jumps-10-on-photonlink-push-and-bernsteins-outperform-start-lumentum-rises-9-corning-advances-3/",
+     "headline": "Bernstein 首次覆盖，给“跑赢大市”评级",
+     "summary": "Bernstein 认为网络和光学供应商是 AI 基建的结构性赢家，同时首次覆盖 Lumentum、Ciena、Arista。当天光通信板块齐涨：Lumentum +9%，Corning +3%，而 SPY 小跌 0.2%。"
+    },
+    {
+     "date": "2026-10",
+     "kind": "analyst",
+     "sentiment": "pos",
+     "source": "stockanalysis.com",
+     "url": "https://stockanalysis.com/stocks/cohr/",
+     "headline": "德意志银行首次覆盖，给“买入”",
+     "summary": "德银认为 COHR 是押注 1.6T 光模块放量的较“干净”的标的。"
+    },
+    {
+     "date": "2026-09-24",
+     "kind": "risk",
+     "sentiment": "watch",
+     "source": "24/7 Wall St.",
+     "url": "https://247wallst.com/investing/2026/09/24/coherent-has-ripped-59-in-2026-is-it-too-late-to-buy-cohr-stock-now/",
+     "headline": "年内涨 59%，但仍落后 Lumentum 等同业",
+     "summary": "估值已经不便宜，市场在讨论现在追高是否太晚；同业 Lumentum、Applied Optoelectronics 涨得更多。"
+    },
+    {
+     "date": "2026-09-18",
+     "kind": "business",
+     "sentiment": "pos",
+     "source": "StockStory",
+     "url": "https://markets.financialcontent.com/stocks/article/stockstory-2026-9-18-coherent-cohr-stock-trades-up-here-is-why",
+     "headline": "扩充可插拔光线路系统，当日涨 4.1%",
+     "summary": "新产品是 QSFP 封装的 C 波段高功率可变增益放大器，支持 800G 数字相干光模块。单套系统可承载 25.6 Tbps 的数据中心流量，传输距离 2–200 公里。"
+    },
+    {
+     "date": "2026-08-13",
+     "kind": "analyst",
+     "sentiment": "pos",
+     "source": "Yahoo Finance",
+     "url": "https://finance.yahoo.com/markets/stocks/articles/cohr-stock-gets-wave-price-145808898.html",
+     "headline": "财报后多家券商上调目标价",
+     "summary": "Rosenblatt 上调至 $500（最高），Raymond James $448，Needham 与 Jefferies $420；偏谨慎的 B. Riley 给 $345（中性），Northland 给 $280。"
+    },
+    {
+     "date": "2026-08-12",
+     "kind": "earnings",
+     "sentiment": "pos",
+     "source": "Yahoo Finance",
+     "url": "https://finance.yahoo.com/markets/stocks/articles/cohr-stock-gets-wave-price-145808898.html",
+     "headline": "Q4 FY26 营收 $20.5 亿，首次单季破 $20 亿",
+     "summary": "营收高于预期的约 $19.8 亿，non-GAAP EPS $1.74（预期约 $1.62）。管理层表示 AI 光模块产能到 2027 年基本售罄，订单已排到 2028 年。"
+    }
+   ]
+  },
+  {
+   "ticker": "RKLB",
+   "company": "Rocket Lab",
+   "updatedAt": "2026-10-08",
+   "watch": "太空板块情绪（SpaceX 融资消息会带动整个板块）；Neutron Q4 能否运抵发射台；预计 11/9 公布 Q3（指引 $2.50–2.65 亿）。技术面 $69.9 支撑、$75.5 阻力。",
+   "items": [
+    {
+     "date": "2026-10-07",
+     "kind": "market",
+     "sentiment": "neg",
+     "source": "24/7 Wall St.",
+     "url": "https://247wallst.com/investing/2026/10/07/spacex-slips-2-on-a-reported-40-billion-chip-financing-plan-rocket-lab-eases-ast-spacemobile-falls-3/",
+     "headline": "10/7 跌约 4%，收 $71.92：被 SpaceX 融资传闻拖累",
+     "summary": "路透社报道 SpaceX 正洽谈筹资约 $400 亿购买 NVIDIA AI 芯片，SpaceX 跌约 2%，太空板块跟跌，AST SpaceMobile 跌 3%。Rocket Lab 与此事无关，属于板块联动；美债收益率和油价上升也压制成长股。",
+     "key": true
+    },
+    {
+     "date": "2026-10-06",
+     "kind": "market",
+     "sentiment": "pos",
+     "source": "stockanalysis.com",
+     "url": "https://stockanalysis.com/stocks/rklb/history/",
+     "headline": "10/6 涨约 2.8%，收 $75.06，触及 $75.5 阻力位附近",
+     "summary": "次日即回落，$75–75.5 一带仍是短线阻力；分析师平均目标价约 $110，16 位中 14 位给买入。"
+    },
+    {
+     "date": "2026-10-05",
+     "kind": "market",
+     "sentiment": "watch",
+     "source": "Benzinga",
+     "url": "https://www.benzinga.com/trading-ideas/movers/26/10/62170255/rocket-lab-stock-pulls-back-whats-going-on",
+     "headline": "上周大涨后获利回吐，收 $73.02（−1.2%）",
+     "summary": "回调没有利空消息。股价仍在 100 日和 200 日均线下方，8 月以来的“死叉”还没解除。"
+    },
+    {
+     "date": "2026-10-01",
+     "kind": "business",
+     "sentiment": "pos",
+     "source": "Stocktwits / TradingView",
+     "url": "https://www.tradingview.com/news/stocktwits:4089c6371094b:0-rklb-stock-jumps-after-hours-rocket-lab-lands-its-biggest-ever-commercial-electron-deal-with-20-new-launches/",
+     "headline": "拿下日本 Synspective 20 次发射，Electron 史上最大商业合同",
+     "summary": "2028–2031 年从新西兰发射 StriX 雷达卫星，Synspective 累计已订 47 次。公司发射积压订单突破 100 次。盘后涨 3%，次日收涨约 5%。",
+     "key": true
+    },
+    {
+     "date": "2026-09-30",
+     "kind": "business",
+     "sentiment": "pos",
+     "source": "BigGo Finance",
+     "url": "https://finance.biggo.com/news/710b3f95-12b0-41ec-a78c-94974a9d7d0f",
+     "headline": "9 月完成 4 次 Electron 发射，全年第 18 次",
+     "summary": "累计第 97 次 Electron 任务，发射频率在加快。华尔街平均目标价约 $109。"
+    },
+    {
+     "date": "2026-09-24",
+     "kind": "business",
+     "sentiment": "pos",
+     "source": "BigGo Finance",
+     "url": "https://finance.biggo.com/news/710b3f95-12b0-41ec-a78c-94974a9d7d0f",
+     "headline": "Iridium 股东以 99.6% 票数批准 $80 亿收购",
+     "summary": "每股作价 $54（$27 现金 + Rocket Lab 股票），只剩监管审批，预计 2027 年中完成。完成后公司将拥有自己的卫星通信星座。",
+     "key": true
+    },
+    {
+     "date": "2026-09-15",
+     "kind": "capital",
+     "sentiment": "watch",
+     "source": "BigGo Finance",
+     "url": "https://finance.biggo.com/news/710b3f95-12b0-41ec-a78c-94974a9d7d0f",
+     "headline": "完成 $19.4 亿增发，提前终止 $36 亿过桥贷款",
+     "summary": "股本被稀释，但用股权替换了高成本债务，收购的资金已经到位。"
+    },
+    {
+     "date": "2026-09-16",
+     "kind": "risk",
+     "sentiment": "watch",
+     "source": "Trefis",
+     "url": "https://www.trefis.com/stock/rklb/articles/615543/what-are-you-actually-buying-in-rklb-stock/2026-09-16",
+     "headline": "估值约 52 倍市销率，押注尚未发生的催化剂",
+     "summary": "Q2 发射业务收入 $4,460 万，环比下降 30%；卫星系统 $1.9 亿是主要收入来源。营业利润率仍为负。2022 年曾跌 70%，花了 28 个月才回来。"
+    },
+    {
+     "date": "2026-08-10",
+     "kind": "earnings",
+     "sentiment": "pos",
+     "source": "SEC 8-K",
+     "url": "https://www.sec.gov/Archives/edgar/data/0001819994/000181999426000061/rklb-08102026ex991.htm",
+     "headline": "Q2 营收 $2.34 亿（+62%），积压订单 $23.6 亿",
+     "summary": "GAAP 毛利率 36.1%，净亏损收窄至 $4,930 万（去年同期 $6,640 万）；积压订单同比增长 137%。Q3 营收指引 $2.50–2.65 亿。同季还拿下美国太空军 $3.97 亿 SB-AMTI 卫星合同。"
+    },
+    {
+     "date": "2026-08-10",
+     "kind": "project",
+     "sentiment": "watch",
+     "source": "Spaceflight Now",
+     "url": "https://spaceflightnow.com/2026/08/10/window-for-2026-launch-debut-of-rocket-labs-neutron-rocket-is-narrowing-as-development-continues/",
+     "headline": "Neutron 2026 年首飞窗口收窄，可能延到 2027",
+     "summary": "公司仍以 Q4 运抵发射台为目标，但要看下半年一级鉴定等关键测试的结果。CEO 表示更看重尽快做到可复用，而不是抢首飞。"
+    }
+   ]
+  }
+ ],
+ "meta": {
+  "priceAsOf": "2026-10-07 美股收盘",
+  "marketNote": "截至 10/7 收盘：SPY 10/6 收在 779、为近一个月高点，10/7 小幅回落，QQQ 一个月仍涨约 5.5%；道指 DIA 和小盘 IWM 一个月分别跌约 3% 和 6%，市场继续偏向大型科技。10/7 美债收益率与油价上升，成长股承压，太空股被 SpaceX $400 亿融资传闻拖累。Oracle 在 $140–145 区间企稳，但又多了一宗医疗数据外泄的风险。",
+  "highlights": [
+   {
+    "sym": "ORCL",
+    "text": "10/5 曝光 Oracle Health 2025 年外泄规模近 2,000 万人；另有董事在 $139 附近买入 2.5 万股"
+   },
+   {
+    "sym": "RKLB",
+    "text": "10/7 跌约 4%，主因是 SpaceX 融资传闻引发板块联动，非公司利空"
+   },
+   {
+    "sym": "COHR",
+    "text": "在 $330–340 横盘消化 10/1 的大涨；FQ1 指引 $22–24 亿，11/4 公布财报"
+   }
+  ],
+  "events": [
+   {
+    "date": "2026-12",
+    "sym": "ORCL",
+    "label": "FQ2 FY27 财报（往年在 12 月中旬，日期未公布）"
+   },
+   {
+    "date": "2026-12",
+    "sym": "RKLB",
+    "label": "Neutron 目标在 Q4 运抵发射台，首飞可能延到 2027"
+   },
+   {
+    "date": "2027-02-01",
+    "sym": "ORCL",
+    "label": "Project Jupiter 天然气管线预定投运日"
+   },
+   {
+    "date": "2027-06",
+    "sym": "RKLB",
+    "label": "Iridium 收购预计完成（年中，待监管批准）"
+   },
+   {
+    "date": "2026-10-09",
+    "sym": "ORCL",
+    "label": "股息登记日（每股 $0.50）"
+   },
+   {
+    "date": "2026-10-23",
+    "sym": "ORCL",
+    "label": "派发股息"
+   }
+  ]
+ }
+}

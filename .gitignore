@@ -1,0 +1,6 @@
+# 持仓和密钥永远不要提交
+*持仓*.json
+holdings*.json
+*.key
+.env
+.DS_Store

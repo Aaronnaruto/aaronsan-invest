@@ -1,0 +1,14 @@
+{
+ "note": "每天自动更新时要追踪的代码。只写代码，不写数量和成本（这个仓库是公开的）。",
+ "indices": [
+  {"sym": "SPY", "label": "标普 500"},
+  {"sym": "QQQ", "label": "纳指 100"},
+  {"sym": "DIA", "label": "道琼斯"},
+  {"sym": "IWM", "label": "罗素 2000"}
+ ],
+ "stocks": [
+  {"sym": "COHR", "label": "Coherent"},
+  {"sym": "RKLB", "label": "Rocket Lab"},
+  {"sym": "ORCL", "label": "Oracle"}
+ ]
+}
