@@ -293,3 +293,6 @@ tr.proj td{color:var(--muted)}
 .dset label{display:flex;flex-direction:column;gap:4px;font-size:.72rem;color:var(--muted)}
 .dset input{background:var(--panel2);border:1px solid var(--line);border-radius:7px;padding:6px 9px;font-size:.86rem;min-width:0}
 .dset .ck{flex-direction:row;align-items:center;gap:8px;font-size:.82rem;color:var(--ink)}
+.demo{padding:10px 16px;display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap;background:var(--amber-soft);border-color:color-mix(in srgb,var(--amber) 35%,var(--line));font-size:.86rem}
+.demo b{color:var(--amber)}
+.life .sub .btn{margin-left:4px;vertical-align:1px}

@@ -29,7 +29,21 @@
   const S = {data:null, list:[], by:{}, err:null, st:AS.loadDiv(), rf:"all", exSp:true, sort:{k:"dy", dir:-1},
              pcv:"list", sel:null, yrs:10, more:false, editId:null, delArm:null, M:null};
   const cfg = () => ({...DEF, ...S.st.settings});
-  const save = () => AS.saveDiv(S.st);
+  const save = () => S.demo ? false : AS.saveDiv(S.st);
+
+  /* ---------- 示例模式：用示例持股预览，不保存 ---------- */
+  const SAMPLE = [
+    {id:"x1", code:"1155", date:"2024-02-05", side:"B", px:9.70, qty:1000, fee:25},
+    {id:"x2", code:"5176", date:"2024-06-10", side:"B", px:1.60, qty:5000, fee:20},
+    {id:"x3", code:"6033", date:"2025-01-15", side:"B", px:18.00, qty:300, fee:20},
+    {id:"x4", code:"1155", date:"2025-04-10", side:"B", px:9.50, qty:500, fee:15},
+    {id:"x5", code:"6947", date:"2025-08-20", side:"B", px:2.70, qty:3000, fee:20},
+    {id:"x6", code:"5176", date:"2025-11-03", side:"S", px:2.00, qty:1000, fee:10}];
+  function setDemo(on){
+    S.demo = on; S.st = on ? {trades: SAMPLE.map(t => ({...t, note:""})), settings: S.st.settings} : AS.loadDiv();
+    $("demo-bar").hidden = !on; renderAll();
+  }
+  document.addEventListener("click", e => { const b = e.target.closest("[data-demo]"); if (b) setDemo(b.dataset.demo === "on"); });
 
   /* ---------- 涨跌颜色（和主页共用设置） ---------- */
   function applyConv(v){ document.documentElement.setAttribute("data-conv", v); $("conv").innerHTML = v === "red" ? "<b>红涨</b><i>绿跌</i>" : "<b>绿涨</b><i>红跌</i>"; }
@@ -289,7 +303,7 @@
   function renderOverview(M){
     const c = cfg(), has = M.held.length > 0;
     $("k-month").innerHTML = has ? `${rm(M.month)}<small>/ 月</small>` : "—";
-    $("k-month2").textContent = has ? `未来 12 个月税后股息 ${rm(M.fwd)} ÷ 12` : "还没有持股。到「我的持股」记下买入记录。";
+    $("k-month2").innerHTML = has ? `未来 12 个月税后股息 ${rm(M.fwd)} ÷ 12` : `还没有持股。到「我的持股」记下买入记录，或先 <button class="btn" type="button" data-demo="on">用示例持股看效果</button>`;
     const cov = c.target > 0 ? M.month / c.target : null;
     $("k-covbar").style.width = (cov ? Math.min(100, cov * 100) : 0) + "%";
     $("k-cov").textContent = "目标覆盖率 " + (cov != null && has ? pc(cov, 1) : "—");
@@ -415,6 +429,7 @@
       const held = others.filter(t => t.code === code && t.date <= date).reduce((a, t) => a + (t.side === "S" ? -t.qty : t.qty), 0);
       if (q > held + 1e-9) { $("t-msg").textContent = `${date} 当天你只持有 ${f(held, 0)} 股，不能卖出 ${f(q, 0)} 股。`; return; }
     }
+    if (S.demo) { $("t-msg").textContent = "示例模式下不会保存。先点页面顶部的「退出示例」，再记下你自己的买卖。"; return; }
     const id = S.editId || ("t" + Date.now().toString(36));
     S.st.trades = others.concat([{id, code, date, side, px:p, qty:q, fee, note:""}]);
     const okSave = save();
@@ -429,7 +444,7 @@
       S.editId = t.id; $("t-code").value = t.code; $("t-date").value = t.date; $("t-side").value = t.side; $("t-px").value = t.px; $("t-qty").value = t.qty; $("t-fee").value = t.fee || "";
       $("t-save").textContent = "保存修改"; $("t-msg").textContent = `正在修改 ${t.date} 的记录`; $("t-px").focus(); }
     if (dl) { const id = dl.dataset.td; if (S.delArm !== id) { S.delArm = id; renderPositions(S.M); return; }
-      S.delArm = null; S.st.trades = S.st.trades.filter(t => t.id !== id); save(); $("t-msg").textContent = "已删除"; renderAll(); }
+      S.delArm = null; if (S.demo) { $("t-msg").textContent = "示例模式下不能删除。"; return; } S.st.trades = S.st.trades.filter(t => t.id !== id); save(); $("t-msg").textContent = "已删除"; renderAll(); }
   });
   $("pos").addEventListener("click", e => { const tr = e.target.closest("tr[data-code]"); if (tr) selectStock(tr.dataset.code, true); });
 
@@ -492,16 +507,17 @@
     e.preventDefault();
     const n = (id, d) => { const v = parseFloat($(id).value); return isFinite(v) && v >= 0 ? v : d; };
     S.st.settings = {target: n("s-target", DEF.target), wht: Math.min(100, n("s-wht", DEF.wht)), tax: $("s-tax").checked, taxTh: n("s-taxth", DEF.taxTh), taxR: Math.min(100, n("s-taxr", DEF.taxR))};
-    save(); $("io-msg").textContent = "设置已保存。"; renderAll();
+    if (S.demo) { const real = AS.loadDiv(); real.settings = S.st.settings; AS.saveDiv(real); } else save();
+    $("io-msg").textContent = "设置已保存。"; renderAll();
   });
   $("io-export").addEventListener("click", async () => {
-    const txt = AS.exportAll(); $("io-text").value = txt;
+    const txt = AS.exportAll(); $("io-text").value = txt;  // 导出的是保存的真实记录，不含示例
     try { await navigator.clipboard.writeText(txt); $("io-msg").textContent = "已复制到剪贴板，也显示在上面的输入框里。"; }
     catch(e){ $("io-text").select(); $("io-msg").textContent = "已显示在输入框里，请手动复制。"; }
   });
   $("io-import").addEventListener("click", () => {
     const r = AS.importAll($("io-text").value); $("io-msg").textContent = r.msg;
-    if (r.ok) { S.st = AS.loadDiv(); fillSettings(); renderAll(); }
+    if (r.ok) { S.demo = false; $("demo-bar").hidden = true; S.st = AS.loadDiv(); fillSettings(); renderAll(); }
   });
 
   /* ---------- 总渲染 ---------- */
