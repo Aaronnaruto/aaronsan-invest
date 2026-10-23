@@ -145,8 +145,10 @@ def stockanalysis(slug):
 def merge(ydivs, sa_rows, ov):
     out = [{"ex": ex, "amt": amt, "src": "y"} for ex, amt in ydivs]
     for r in sa_rows or []:
-        m = next((o for o in out if abs(days_between(o["ex"], r["ex"])) <= 4
-                  and "sa" not in o["src"]), None)
+        # 同一周可能有两笔（如 REIT 连续两天除息），按“日期差 + 金额差”挑最接近的一笔
+        cand = [o for o in out if abs(days_between(o["ex"], r["ex"])) <= 4 and "sa" not in o["src"]]
+        m = min(cand, key=lambda o: abs(days_between(o["ex"], r["ex"]))
+                + (0 if abs(o["amt"] - r["amt"]) <= 0.05 * max(r["amt"], 1e-9) else 10), default=None)
         if m:
             for k in ("rec", "pay"):
                 if r.get(k):
