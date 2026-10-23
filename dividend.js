@@ -531,7 +531,13 @@
   let rz; addEventListener("resize", () => { clearTimeout(rz); rz = setTimeout(renderCharts, 150); });
 
   fillSettings();
-  fetch("dividends.json", {cache:"no-store"}).then(r => { if (!r.ok) throw new Error(r.status); return r.json(); }).then(d => {
+  const getJson = u => fetch(u, {cache:"no-store"}).then(r => { if (!r.ok) throw new Error(r.status); return r.json(); });
+  Promise.all([getJson("dividends.json"), getJson("portfolio.json").catch(() => null)]).then(([d, pf]) => {
+    // 这台设备没存过记录时，显示网站预设的持股（portfolio.json）；之后在这台设备改动就以本机记录为准
+    if (pf && pf.dividend && AS.get(AS.K.div, null) == null) {
+      S.st = AS.normDiv(pf.dividend); S.fromSite = true;
+      $("mi-meta").textContent = "网站预设的持股记录 · 在这台设备修改后会另存在浏览器里";
+    }
     S.data = d; S.list = (d.stocks || []).filter(s => s && s.code).map(prep); S.list.forEach(s => S.by[s.code] = s);
     $("asof").textContent = `马股收盘 ${d.priceAsOf || "—"} · 更新于 ${(d.updatedAt || "").slice(5)}`;
     fillCodes();

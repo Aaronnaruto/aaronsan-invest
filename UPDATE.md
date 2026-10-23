@@ -34,6 +34,7 @@
 - `.github/workflows/dividends.yml` 每个交易日 MYT 18:37 运行 `scripts/update_dividends.py`，自动写 `dividends.json` 并推送。
   也会在改动 `dividend-tickers.json` / `dividend-overrides.json` 后自动运行一次。
 - 价格与除息：Yahoo Finance（`<代码>.KL`）；登记日、发放日、已宣布股息：stockanalysis.com。
+- `portfolio.json` 是股息台的预设持股（Aaron 要求放进网站，方便家人直接打开看）。只有 Aaron 要求时才改它，自动更新不要动。
 - **不要手动编辑 `dividends.json`**，下次运行会被覆盖。
 - 要新增或删除股息台追踪的股票：改 `dividend-tickers.json`（code = Bursa 代码，slug = Bursa 简称，type = stock / reit）。
 - 要按 Bursa 公告修正某一笔股息（标记特别股息、写明中期/末期、补发放日或补一笔漏掉的股息）：改 `dividend-overrides.json`，格式见文件里的说明。
