@@ -257,13 +257,19 @@
   });
   $("k-clear").addEventListener("click", () => { lsSet(LS.k, null); stopLive(); S.live = {}; S.liveAt = null; S.liveErr = null; renderSettings(); renderAll(); });
   $("io-export").addEventListener("click", async () => {
-    const txt = JSON.stringify(S.holdings.map(({id, ...h}) => h), null, 1);
+    const txt = window.AS ? AS.exportAll() : JSON.stringify(S.holdings.map(({id, ...h}) => h), null, 1);
     $("io-text").value = txt;
     try { await navigator.clipboard.writeText(txt); $("io-msg").textContent = "已复制到剪贴板，也显示在上面的输入框里。"; }
     catch(e){ $("io-text").select(); $("io-msg").textContent = "已显示在输入框里，请手动复制。"; }
   });
   $("io-import").addEventListener("click", () => {
-    let arr; try { arr = JSON.parse($("io-text").value); } catch(e){ $("io-msg").textContent = "格式不对：请粘贴完整的 JSON（以 [ 开头，以 ] 结尾）。"; return; }
+    let arr; try { arr = JSON.parse($("io-text").value); } catch(e){ $("io-msg").textContent = "格式不对：请粘贴导出的完整 JSON。"; return; }
+    let divMsg = "";
+    if (arr && !Array.isArray(arr) && typeof arr === "object") {  // v2：{holdings, dividend}
+      if (arr.dividend && window.AS) { const d = AS.normDiv(arr.dividend); AS.saveDiv(d); divMsg = `，股息台 ${d.trades.length} 笔买卖记录`; }
+      arr = Array.isArray(arr.holdings) ? arr.holdings : [];
+      if (!arr.length) { S.holdings = []; saveHoldings(); $("io-msg").textContent = "已导入" + (divMsg ? divMsg.slice(1) : "（没有美股持仓）") + "。"; afterHoldingsChange(); return; }
+    }
     if (!Array.isArray(arr)) { $("io-msg").textContent = "格式不对：需要一个持仓列表。"; return; }
     const clean = arr.filter(h => h && typeof h.sym === "string" && isFinite(h.qty) && isFinite(h.avg)).map(h => {
       const sym = h.sym.toUpperCase(), kind = h.kind === "OPT" ? "OPT" : "STK";
@@ -273,7 +279,7 @@
       return o;
     });
     if (!clean.length) { $("io-msg").textContent = "没有找到有效的持仓。"; return; }
-    S.holdings = clean; saveHoldings(); $("io-msg").textContent = `已导入 ${clean.length} 笔持仓。`; afterHoldingsChange();
+    S.holdings = clean; saveHoldings(); $("io-msg").textContent = `已导入 ${clean.length} 笔美股持仓${divMsg}。`; afterHoldingsChange();
   });
 
   /* ---------- live quotes (Finnhub, optional) ---------- */

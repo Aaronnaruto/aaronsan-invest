@@ -1,0 +1,163 @@
+<!doctype html>
+<html lang="zh-Hans">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="robots" content="noindex,nofollow">
+<meta name="theme-color" content="#FAF6EF">
+<script>try{document.documentElement.dataset.theme=localStorage.getItem("aaronsan.theme")||"light"}catch(e){document.documentElement.dataset.theme="light"}</script>
+<title>股息台 · Aaron桑的投资平台</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%238F5D2E'/%3E%3Cpolyline points='5,22 12,15 17,19 27,8' fill='none' stroke='%23FAF6EF' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@600;800&family=JetBrains+Mono:wght@400;500&family=Noto+Sans+SC:wght@400;500;700&display=swap">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="top"><div class="top-in">
+  <div class="brand">Aaron桑<span>的</span>投资平台</div>
+  <nav aria-label="页面">
+    <a href="index.html#observe">观察区<small>OBSERVE</small></a>
+    <a href="index.html#holdings">持仓<small>PORTFOLIO</small></a>
+    <a href="index.html#news">资讯<small>NEWS</small></a>
+    <a href="index.html#calendar">日历<small>EVENTS</small></a>
+    <a href="dividend.html" aria-current="page">股息<small>DIVIDEND</small></a>
+  </nav>
+  <div class="top-r">
+    <span class="badge" id="asof">加载中…</span>
+    <button class="toggle" id="theme" type="button" title="切换浅色 / 深色">浅木</button>
+    <button class="toggle" id="conv" type="button" title="切换涨跌颜色"><b>绿涨</b><i>红跌</i></button>
+  </div>
+</div></div>
+
+<div class="wrap">
+  <section id="overview" aria-labelledby="ov-h">
+    <div class="sh"><h2 id="ov-h">股息总览<small>Dividend</small></h2><span class="meta">马股 · 金额一律 RM · 股息为税后现金</span></div>
+    <div class="hero">
+      <div class="panel life">
+        <span class="lbl">每月股息生活费</span>
+        <span class="big" id="k-month">—</span>
+        <span class="sub" id="k-month2">按现有持股推算未来 12 个月的税后股息 ÷ 12</span>
+        <div class="cov"><div class="bar"><i id="k-covbar" style="width:0"></i></div>
+          <div class="row"><span id="k-cov">目标覆盖率 —</span><span id="k-target">目标 —</span></div></div>
+      </div>
+      <div class="panel kpis">
+        <div><span class="lbl">总投入</span><span class="v num" id="k-cost">—</span><span class="s" id="k-cost2"></span></div>
+        <div><span class="lbl">现市值</span><span class="v num" id="k-mv">—</span><span class="s" id="k-mv2"></span></div>
+        <div><span class="lbl">过去 12 个月已收</span><span class="v num" id="k-ttm">—</span><span class="s" id="k-ttm2"></span></div>
+        <div><span class="lbl">组合 TTM 股息率</span><span class="v num" id="k-dy">—</span><span class="s">税前，按现价</span></div>
+        <div><span class="lbl">Yield on Cost</span><span class="v num" id="k-yoc">—</span><span class="s">税前，按你的成本</span></div>
+        <div><span class="lbl">累计至今已收</span><span class="v num" id="k-all">—</span><span class="s" id="k-all2"></span></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="income" aria-labelledby="in-h">
+    <div class="sh"><h2 id="in-h">股息收入<small>Income</small></h2><span class="meta">按发放日归月份 · 斜体为待发放或预估</span></div>
+    <div class="panel chartbox">
+      <div class="hh"><span class="ttl">每月股息（过去 12 个月 + 未来 12 个月）</span>
+        <div class="lg"><span><i style="background:var(--c1)"></i>已到账</span><span><i style="background:var(--c2)"></i>待发放 / 预估</span><span><i class="dash"></i>目标每月生活费</span></div></div>
+      <div class="ch" id="ch-month"></div>
+    </div>
+    <div class="panel tw"><table class="ytab"><thead id="yt-h"></thead><tbody id="yt-b"><tr><td colspan="15" class="empty">加载中…</td></tr></tbody></table></div>
+    <p class="note" id="yt-note"></p>
+  </section>
+
+  <section id="living" aria-labelledby="li-h">
+    <div class="sh"><h2 id="li-h">生活费换算<small>Living</small></h2><span class="meta" id="li-meta"></span></div>
+    <div class="lifegrid">
+      <div class="panel lc"><span class="lbl">未来 12 个月股息（税后）</span><span class="v" id="l-year">—</span><p id="l-year2"></p></div>
+      <div class="panel lc"><span class="lbl">相当于</span><span class="v" id="l-month">—</span><p id="l-day"></p></div>
+      <div class="panel lc"><span class="lbl">要 100% 覆盖生活费</span><span class="v" id="l-need">—</span><p id="l-need2"></p></div>
+    </div>
+    <div class="panel lc"><span class="lbl">现金流偏少的月份</span><div class="thin" id="l-thin"></div><p id="l-thin2"></p></div>
+  </section>
+
+  <section id="paycal" aria-labelledby="pc-h">
+    <div class="sh"><h2 id="pc-h">派息日历<small>Payouts</small></h2>
+      <div class="seg" id="pcv" role="group" aria-label="日历视图"><button type="button" data-v="list" aria-pressed="true">列表</button><button type="button" data-v="month" aria-pressed="false">月历</button></div></div>
+    <div id="pc-box"></div>
+    <p class="note">应得股数按「除息日前一天收盘时你持有的股数」计算；除息日在今天之后的，用你现在的持股。预估 = 按去年同期派息推算，还没宣布。</p>
+  </section>
+
+  <section id="mine" aria-labelledby="mi-h">
+    <div class="sh"><h2 id="mi-h">我的持股<small>Holdings</small></h2><span class="meta">只存在这台设备的浏览器里</span></div>
+    <div class="panel tw"><table class="rank" style="min-width:900px"><thead><tr><th>股票</th><th style="text-align:right">股数</th><th style="text-align:right">均价</th><th style="text-align:right">成本</th><th style="text-align:right">现价</th><th style="text-align:right">市值</th><th style="text-align:right">未实现</th><th style="text-align:right">TTM DY</th><th style="text-align:right">YoC</th><th>下次派息</th></tr></thead><tbody id="pos"></tbody></table></div>
+    <details class="panel mgr" id="tmgr">
+      <summary><span><b>买卖记录</b> · 新增、修改或删除每一笔</span><span id="t-count">展开</span></summary>
+      <div class="mgr-in">
+        <form class="hf" id="tf" autocomplete="off">
+          <label>股票<select id="t-code" required></select></label>
+          <label>日期<input id="t-date" type="date" required></label>
+          <label>类型<select id="t-side"><option value="B">买入</option><option value="S">卖出</option><option value="DRP">DRP 以股代息</option></select></label>
+          <label>价格（RM）<input id="t-px" type="number" step="any" min="0" required></label>
+          <label>股数<input id="t-qty" type="number" step="1" min="1" required placeholder="1 lot = 100 股"></label>
+          <label>手续费总额<input id="t-fee" type="number" step="any" min="0" placeholder="经纪+印花+清算"></label>
+          <button class="btn pri" type="submit" id="t-save">保存</button>
+          <div class="formmsg" id="t-msg">DRP：填收到的股数和发行价，那一笔股息会扣掉再投资的部分，不算现金。要追踪名单外的股票，在仓库的 dividend-tickers.json 加代码。</div>
+        </form>
+        <div class="tw"><table><thead><tr><th>日期</th><th>股票</th><th>类型</th><th style="text-align:right">股数</th><th style="text-align:right">价格</th><th style="text-align:right">手续费</th><th></th></tr></thead><tbody id="tlist"></tbody></table></div>
+      </div>
+    </details>
+  </section>
+
+  <section id="rank" aria-labelledby="rk-h">
+    <div class="sh"><h2 id="rk-h">高息榜<small>Yield</small></h2><span class="meta" id="rk-meta"></span></div>
+    <div class="nbar">
+      <div class="chips" id="rk-f">
+        <button type="button" class="chip" data-rf="all" aria-pressed="true">全部</button>
+        <button type="button" class="chip" data-rf="stock" aria-pressed="false">非 REIT</button>
+        <button type="button" class="chip" data-rf="reit" aria-pressed="false">REIT</button>
+        <button type="button" class="chip" data-rf="mine" aria-pressed="false">我持有的</button>
+      </div>
+      <button type="button" class="chip key" id="rk-sp" aria-pressed="true">排除特别股息</button>
+    </div>
+    <div class="panel tw"><table class="rank" style="min-width:860px"><thead id="rk-h2"></thead><tbody id="rk-b"><tr><td colspan="8" class="empty">加载中…</td></tr></tbody></table></div>
+    <p class="note">TTM 股息率 = 过去 12 个月除息的每股股息合计 ÷ 最新收盘价。历史百分位 = 现在的股息率在过去 10 年每月股息率里排第几（越高代表股价相对股息越便宜）。点一行看个股详情。</p>
+  </section>
+
+  <section id="stock" aria-labelledby="sk-h">
+    <div class="sh"><h2 id="sk-h">个股<small>Detail</small></h2>
+      <div class="seg" id="sk-r" role="group" aria-label="图表范围"><button type="button" data-y="3" aria-pressed="false">3 年</button><button type="button" data-y="5" aria-pressed="false">5 年</button><button type="button" data-y="10" aria-pressed="true">10 年</button></div></div>
+    <div class="sd">
+      <div class="panel sdh"><select id="sk-sel" aria-label="选择股票"></select><span class="verdict" id="sk-v"></span></div>
+      <div class="duo">
+        <div class="panel chartbox"><div class="hh"><span class="ttl">TTM 股息率</span><div class="lg"><span><i style="background:var(--c1)"></i>股息率</span><span><i class="dash"></i>平均</span><span><i style="background:color-mix(in srgb,var(--c1) 18%,transparent)"></i>±1 标准差</span></div></div><div class="ch" id="ch-dy"></div></div>
+        <div class="panel chartbox"><div class="hh"><span class="ttl">股价与你的买卖</span><div class="lg"><span><i style="background:var(--c1)"></i>月收盘价</span><span>▲ 买入</span><span>▼ 卖出</span></div></div><div class="ch" id="ch-px"></div></div>
+      </div>
+      <div class="panel tw"><table><thead><tr><th>除息日</th><th>登记日</th><th>发放日</th><th style="text-align:right">每股</th><th style="text-align:right">当时 DY</th><th>备注</th></tr></thead><tbody id="sk-dv"></tbody></table></div>
+      <button class="btn" type="button" id="sk-more" style="align-self:flex-start">显示全部派息历史</button>
+    </div>
+  </section>
+
+  <section id="dsettings" aria-labelledby="ds-h">
+    <details class="panel mgr" id="dset">
+      <summary><span><b id="ds-h">股息台设置</b> · 生活费目标、税务与备份</span><span>展开</span></summary>
+      <div class="mgr-in">
+        <form class="dset" id="sf" autocomplete="off">
+          <label>目标每月生活费（RM）<input id="s-target" type="number" step="any" min="0"></label>
+          <label>REIT 派息预扣税（%）<input id="s-wht" type="number" step="any" min="0" max="100"></label>
+          <label class="ck"><input id="s-tax" type="checkbox"> 计算个人股息税</label>
+          <label>股息税起征额（RM / 年）<input id="s-taxth" type="number" step="any" min="0"></label>
+          <label>股息税税率（%）<input id="s-taxr" type="number" step="any" min="0" max="100"></label>
+          <button class="btn pri" type="submit">保存设置</button>
+        </form>
+        <p class="note">REIT 预扣税和股息税每年预算案都可能调整，这里的数字请按当年规定自行核对。股息税只算一般股票的单层股息，超过起征额的部分才扣，以年为单位计算，不分摊到每个月。</p>
+        <div class="io">
+          <h3 style="font-size:.92rem;margin:0">全站备份</h3>
+          <p class="note" style="margin:0">导出内容包含美股持仓和股息台的买卖记录、设置。到新设备时在这里（或主页的网站设置）导入。</p>
+          <textarea id="io-text" aria-label="备份 JSON"></textarea>
+          <div class="b"><button class="btn" type="button" id="io-export">导出全部</button><button class="btn pri" type="button" id="io-import">导入（覆盖）</button></div>
+          <span class="smsg" id="io-msg"></span>
+        </div>
+      </div>
+    </details>
+  </section>
+
+  <footer id="foot">本网站不连接任何券商账户。价格与除息资料来自 Yahoo Finance，登记日与发放日来自 stockanalysis.com，每个交易日由 GitHub Actions 自动更新；以 Bursa Malaysia 公告为准，仅供参考，不构成投资建议。</footer>
+</div>
+
+<script src="common.js"></script>
+<script src="dividend.js"></script>
+</body>
+</html>

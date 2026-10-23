@@ -1,7 +1,7 @@
 # 每日更新规则（给自动更新的 Claude 看）
 
-本仓库是「Aaron桑的投资平台」的静态网站，由 GitHub Pages 发布。网站只读 `data.json`。
-每次更新只改 `data.json`，不改 `index.html` / `app.js`，不提交任何持仓数量、成本或个人资料。
+本仓库是「Aaron桑的投资平台」的静态网站，由 GitHub Pages 发布。主页读 `data.json`，股息页（`dividend.html`）读 `dividends.json`。
+每次更新只改 `data.json`，不改页面文件（`index.html` / `dividend.html` / `*.js` / `style.css`），不提交任何持仓数量、成本或个人资料。
 
 ## 步骤
 1. 读 `tickers.json`，得到要追踪的指数和个股。
@@ -29,3 +29,13 @@
 - 不要连接或调用任何券商（IBKR 等）。
 - 不要把持仓数量、成本、账户信息写进仓库。
 - 美股休市日（周末、美国假日）如果没有新收盘价，只更新资讯，不要编造价格。
+
+## 股息台（dividends.json）—— 由 GitHub Actions 自动更新，Claude 不用改
+- `.github/workflows/dividends.yml` 每个交易日 MYT 18:37 运行 `scripts/update_dividends.py`，自动写 `dividends.json` 并推送。
+  也会在改动 `dividend-tickers.json` / `dividend-overrides.json` 后自动运行一次。
+- 价格与除息：Yahoo Finance（`<代码>.KL`）；登记日、发放日、已宣布股息：stockanalysis.com。
+- **不要手动编辑 `dividends.json`**，下次运行会被覆盖。
+- 要新增或删除股息台追踪的股票：改 `dividend-tickers.json`（code = Bursa 代码，slug = Bursa 简称，type = stock / reit）。
+- 要按 Bursa 公告修正某一笔股息（标记特别股息、写明中期/末期、补发放日或补一笔漏掉的股息）：改 `dividend-overrides.json`，格式见文件里的说明。
+- 如果 Action 失败（在 GitHub 的 Actions 页面看到红色），通常是数据源暂时不可用，下一个交易日会自动重试；
+  某只股票抓取失败时会沿用上一次的数据，并在该股的 `err` 字段写明原因。
