@@ -267,7 +267,10 @@
     let divMsg = "";
     if (arr && !Array.isArray(arr) && typeof arr === "object") {  // v2：{holdings, dividend}
       if (arr.dividend && window.AS) { const d = AS.normDiv(arr.dividend); AS.saveDiv(d); divMsg = `，股息台 ${d.trades.length} 笔买卖记录`; }
-      arr = Array.isArray(arr.holdings) ? arr.holdings : [];
+      if (!Array.isArray(arr.holdings)) {  // 只含股息台记录的备份：不动美股持仓
+        $("io-msg").textContent = divMsg ? "已导入" + divMsg.slice(1) + "，美股持仓没有改动。" : "没有找到可导入的内容。"; return;
+      }
+      arr = arr.holdings;
       if (!arr.length) { S.holdings = []; saveHoldings(); $("io-msg").textContent = "已导入" + (divMsg ? divMsg.slice(1) : "（没有美股持仓）") + "。"; afterHoldingsChange(); return; }
     }
     if (!Array.isArray(arr)) { $("io-msg").textContent = "格式不对：需要一个持仓列表。"; return; }
